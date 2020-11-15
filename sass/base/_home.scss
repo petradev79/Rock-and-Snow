@@ -1,0 +1,69 @@
+.section-about {
+	padding: 20rem 0;
+	
+	@include respond(tab-port) {
+		padding: 5rem 0;
+	}
+}
+
+.section-tours {
+	padding: 20rem 0;
+
+	@include respond(tab-port) {
+		padding: 5rem 0;
+	}
+}
+
+.section-users {
+	background-image: linear-gradient(
+		to right bottom,
+		$color-primary-dark, 
+		$color-primary-light);
+	background-size: cover;
+	transform: skewY(-7deg);
+	padding: 20rem 0;
+
+	& > * {
+		transform: skewY(7deg);
+	}
+
+	@include respond(tab-port) {
+		padding: 5rem 0;
+	}
+}
+
+.section-gear {
+	padding: 20rem 0;
+
+	@include respond(tab-port) {
+		padding: 5rem 0;
+	}
+}
+
+.section-offers {
+	padding: 20rem 0;
+
+	@include respond(tab-port) {
+		padding: 10rem 0;
+	}
+}
+
+.section-form {
+	background-image: linear-gradient(
+		to right bottom,
+		$color-primary-dark, 
+		$color-primary-light);
+	background-size: cover;
+	transform: skewY(-7deg);
+	padding: 20rem 0;
+
+	& > * {
+		transform: skewY(7deg);
+	}
+
+	span { color: $color-primary; }
+
+	@include respond(tab-port) {
+		padding: 10rem 0 15rem 0;
+	}
+}

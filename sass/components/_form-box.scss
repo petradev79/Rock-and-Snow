@@ -1,0 +1,75 @@
+.form-box {
+	background-image: linear-gradient(
+		rgba($color-white, .8), 
+		rgba($color-white, .8)),
+		url(../img/photo-1.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	border-radius: 1rem;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+	@include respond (tab-port) {
+		margin: 0 4rem;	
+	}
+
+	@include respond (phone) {
+		margin: 0 2rem;
+	}
+
+	&__content {
+		width: 70%;
+		margin-left: 15%;
+
+		@include respond (tab-port) {
+			width: 80%;
+			margin-left: 10%;
+			text-align: center;
+		}
+	}
+
+	.form {
+		&__group:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+
+		&__input {
+			font-size: 1.5rem;
+			font-family: inherit;
+			color: inherit;
+			padding: 1rem 2rem;
+			border-radius: 2px;
+			background-color: rgba($color-primary-light, .2);
+			border: none;
+			border-bottom: 3px solid transparent;
+			width: 90%;
+			display: block;
+			transition: all .3s;
+
+			@include respond (tab-port) {
+				width: 100%;
+			}
+
+			&:focus {
+				outline: none;
+				box-shadow: 0 1rem 2rem rgba($color-black, .1);
+				border-bottom: 3px solid $color-primary;
+			}
+
+			&:focus:invalid {
+				border-bottom: 3px solid red;
+			}
+
+			&::input-placeholder {
+				color: $color-grey-light;
+			}
+		}
+
+		&__label {
+			font-size: 1.8rem;
+			margin-bottom: 1.5rem;
+			display: block;
+			color: $color-grey-darken;
+		}
+	}
+}

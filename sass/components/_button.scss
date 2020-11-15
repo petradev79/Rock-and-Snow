@@ -1,0 +1,90 @@
+.btn {//jos testiram ceo
+	&,
+	&:link,
+	&:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 1.5rem 4rem;
+		border-radius: 2.5rem;
+		position: relative;
+		font-size: $default-font-size;
+		transition: all .4s;
+	}
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+		&::after {
+			transform: scaleX(1.4) scaleY(1.6);
+			opacity: 0;
+		}
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-1px);
+		box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+	}
+
+	&--white {
+		background-color: $color-white;
+		color: $color-primary;
+		display: inline-block;
+
+		&::after {
+			background-color: $color-white;
+		}
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	&--green {
+		background-color: $color-primary;
+		color: $color-white;
+
+		&::after {
+			background-color: $color-primary;
+		}
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+
+	&::after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		border-radius: 10rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all .4s;
+	}
+
+	&--on-small {
+		display: none;
+
+		@include respond(tab-port) {
+			display: inline-block;
+			margin: 3rem auto 0 auto;
+		}
+	}
+
+	&--on-big {
+		display: inline-block;
+
+		@include respond(tab-port) {
+			display: none;
+		}
+	}
+}
+
+
+			

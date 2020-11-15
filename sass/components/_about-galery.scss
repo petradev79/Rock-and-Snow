@@ -1,0 +1,66 @@
+.about-galery {
+	position: relative;
+
+	&__photo {
+		position: absolute;
+		width: 55%;
+		border-radius: 2px;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+		z-index: 10;
+		transition: all .2s;
+		outline-offset: 1rem;
+
+		@include respond(tab-port) {
+			float: left;
+			position: relative;
+			width: 33.333333%;
+			box-shadow: 0 1.2rem 3rem rgba($color-black, .2);
+		}
+
+		&--p1 {
+			left: 5rem;
+			top: 20rem;
+
+			@include respond(tab-port) {
+				left: 0;
+				top: 3rem;
+				transform: scale(1.2);
+			}
+		}
+
+		&--p2 {
+			left: 25%;
+			top: 3rem;
+
+			@include respond(tab-port) {
+				left: 0;
+				top: 0;
+				transform: scale(1.4);
+				z-index: 20;
+			}
+		}
+
+		&--p3 {
+			right: 0;
+			top: -10rem;
+
+			@include respond(tab-port) {
+				left: 0;
+				top: -3rem;
+				transform: scale(1.2);
+			}
+		}
+
+		&:hover {
+			outline: 1.5rem solid $color-primary;
+			transform: scale(1.05) translateY(-.5rem);
+			box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+			z-index: 20;
+		}
+	}
+
+	&:hover &__photo:not(:hover) {
+		transform: scale(.95);
+
+	}
+}

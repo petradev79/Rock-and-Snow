@@ -1,0 +1,21 @@
+// COLORS
+$color-primary: #2ecc71;
+$color-primary-light: #7bed9f; 
+$color-primary-dark: #00b894;
+
+$color-grey-light: #f7f7f7;
+$color-grey-dark: #777;
+$color-grey-darken: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+
+// UTILITIES
+.u-center-text { text-align: center !important; }
+
+.u-margin-bottom-big { margin-bottom: 8rem !important; }
+.u-margin-bottom-medium { margin-bottom: 4rem !important; }
+.u-margin-bottom-small { margin-bottom: 1.5rem !important; }

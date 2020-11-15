@@ -1,0 +1,79 @@
+.card {
+	position: relative;
+	background-color: $color-white;
+	border-radius: 1rem;
+	box-shadow: 0 2rem 4rem rgba($color-black, .2);
+	transition: transform .3s;
+
+	@include respond (tab-port) {
+		margin: 0 4rem;
+	}
+
+	@include respond (phone) {
+		margin: 0 2rem;
+	}
+
+	&__heading {
+		border-bottom: 1px solid $color-primary-light;
+		text-align: center;
+		position: relative;
+		top: 4rem;
+		left: 50%;
+		transform: translateX(-50%);
+
+    	&--title {
+			font-weight: 300;
+			text-transform: uppercase;
+			font-size: 3rem;
+    	}
+
+    	&--price {
+    		font-size: 7rem;
+			font-weight: 100;
+			color: $color-primary;
+    	}
+
+    	&--subtitle {
+    		font-size: 2.2rem;
+    	}
+	}
+
+	&__description {
+		padding: 2rem;
+
+		ul {
+			list-style: none;
+			width: 90%;
+			margin: 0 auto;
+
+			li {
+				text-align: center;
+				font-size: $default-font-size;
+				padding: 1rem;
+				line-height: 2.2rem;
+			}
+		}
+	}
+
+	&--1 {
+		top: 20%;
+		left: 0;
+
+		@include respond(tab-port) {
+			top: -3rem;
+		}
+	}
+
+	&--2 {
+		top: -20%;
+		left: 0;
+
+		@include respond(tab-port) {
+			top: 0;
+		}
+	}
+
+	&:hover {
+		transform: scale(1.03);
+	}
+}

@@ -1,0 +1,80 @@
+.footer {
+	background-color: $color-grey-darken;
+	color: $color-grey-light;
+	font-size: 1.5rem;
+	position: relative;
+	clip-path: polygon(0 17vh, 100% 0, 100% 100%, 0 100%);
+	padding: 20rem 0 10rem 0;
+	margin-top: -12rem;
+
+	@include respond(tab-land) {
+		clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+		padding: 10rem 0 5rem 0;
+	}
+
+	@include respond(tab-port) {
+		text-align: center;
+	}
+
+	@include respond(big-desktop) {
+		margin-top: -15rem;
+	}
+
+	&__logo-box {
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+
+	&__logo {
+		width: 20rem;
+		height: auto;
+	}
+
+	&__title {
+		text-align: center;
+		bottom: 0;
+		position: absolute;
+		margin-bottom: 5rem;
+
+		@include respond(tab-port) {
+			position: relative;
+			margin-bottom: 0;
+		}
+	}
+
+	&__navigation {
+		padding-top: 2rem;
+		display: inline-block;
+		position: relative;
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__item {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 1.5rem;
+
+			@include respond(phone) {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	&__copyright {
+		padding-top: 2rem;
+		width: 80%;
+		margin-left: 20%;
+
+		@include respond(tab-port) {
+			margin-left: 10%;
+		}
+	}
+
+	&__link {
+		@include linkFooter;
+	}	
+}

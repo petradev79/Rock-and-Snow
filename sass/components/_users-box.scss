@@ -1,0 +1,61 @@
+.users-box {
+	background-color: $color-white;
+	padding: 3rem;
+	border-radius: 1rem;
+	box-shadow: 0 2rem 4rem rgba($color-black, .3);
+
+	@include respond(tab-port) {
+		margin: 2rem 4rem;
+	}
+
+	@include respond(phone) {
+		margin: 2rem;
+	}
+
+	&__content {
+		position: relative;
+		padding: 5rem 1rem;
+
+		@include respond(tab-port) {
+			padding: 2rem 1rem;
+		}
+
+	}	
+
+	&__img {
+		width: 15rem;
+		height: 15rem;
+		border-radius: 50%;
+		float: left;
+		shape-outside: circle();
+		margin: 6rem 3rem 3rem 0;
+		background-repeat: no-repeat;
+
+		@include respond(tab-port) {
+			width: 17rem;
+			height: 17rem;
+		}
+
+		@include respond(big-desktop) {
+			width: 13rem;
+			height: 13rem;
+		}
+
+		&--1 {
+			background-image: url(../img/user-1.jpg);	
+		}
+
+		&--2 {
+			background-image: url(../img/user-2.jpg);	
+		}
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		text-align: justify;
+
+		h3 {
+			text-align: left;
+		}
+	}
+}

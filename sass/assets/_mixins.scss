@@ -1,0 +1,39 @@
+@mixin clearfix {
+	&::after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+}
+
+// FOOTER-LINKS STYLING
+@mixin linkFooter {
+	&:link,
+	&:visited {
+		display: inline-block;
+		text-decoration: none;
+		color: $color-grey-light;
+		transition: all .3s;
+	}
+
+	&:hover,
+	&:active {
+		color: $color-primary-light;
+	}
+}
+
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 36em) { @content }; // 576px
+	}
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 62em) { @content }; // 992px
+	}
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75em) { @content }; // 1200px
+	}
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 100em) { @content }; // 1600px
+	}
+}

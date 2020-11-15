@@ -1,0 +1,43 @@
+.gear {
+
+	&__img {
+		display: block;
+		width: 100%;
+		box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+
+		@include respond(tab-port) {
+			width: 50%;
+			margin: -5rem auto 0 auto;
+		}
+	}
+
+	&__content {
+		padding: 5rem;
+		color: $color-white;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+
+	&__background {
+		position: absolute;
+		right: 0;
+		top: -10rem;
+		width: 80%;
+		height: 75rem;
+		background-image: url(../img/gear-bg-small.jpg);
+		background-size: cover;
+
+		@media only screen and (min-resolution: 192dpi) and (min-width: 62em),
+		       only screen and (min-width: 120em) {
+		    background-image: url(../img/gear-bg.jpg);   	
+		}
+
+		@include respond(tab-port) {
+			top: 0rem;
+			width: 100%;
+			height: 85rem;
+		}
+	}
+}
